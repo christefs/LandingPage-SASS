@@ -34,7 +34,7 @@ body {
 
 nav {
     
-    width: auto;
+    /*width: auto;*/
     /*
     display: flex;
     justify-content: space-between;*/
@@ -62,7 +62,7 @@ main {
     background-color: $primary-color;
 }*/
 article {
-    width: auto;
+    /*width: auto;*/
     color: $primary-text-color;
     padding-left: 45px;
     padding-right: 45px;
@@ -89,7 +89,8 @@ article {
 
     @include buttonStyle; 
     button {
-        width: 12vw;
+        /*width: 12vw;*/
+        width: 172px;
         padding: 20px;;
         background-color: $quaternary-color;
         /*border-style: none;*/
@@ -102,14 +103,17 @@ article {
     }    
         
     img {
-        width: 25vw;
+        /*width: 25vw;*/
+        width: 95%;
+        min-width: 300px;
+        max-width: 360px;
         border-radius: 19px;
     }
     
 }
 
 section {
-    width: auto;
+    /*width: auto;*/
     height: auto;
     /*background-color: pink;*/
     padding: 60px;
@@ -126,24 +130,41 @@ section {
             padding-bottom: 60px;
         }
         .card-section {
-            /*display: flex;*/
-            width: auto;
+            display: flex;
+            width: 100%;
             height: auto;
             /*justify-content: center;*/
             flex-wrap: wrap;
             /*align-items: center;*/
             @include flexCenter(row, space-evenly, center);
+            
+            /*
             column-gap: 200px;
-            row-gap: 80px;
+            row-gap: 80px;*/
        
         }
+        
+        .box-product-card {
+            display: flex;
+            width: 33.3%;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
         .product-card {
-            width: 14vw;
-            height: 45vh;
+            /*width: 14vw; 
+            height: 45vh;*/
+            
+            width: 75%;
+            min-width: 190px;
+            max-width: 240px;
+            height: 380px;
             background-color: $secondary-color;
             color: $primary-text-color;
             padding: 20px;
             border-radius: 8px;
+
+            
             .icon {
                 width: 100%;
                 display: flex;
@@ -163,8 +184,10 @@ section {
                 justify-content: center;
                 align-items: center;
                 img {
-                    width: 12vw;
-                    height: 30vh;
+                    /*width: 12vw;
+                    height: 30vh;*/
+                    width: 172px;
+                    height: 228px;
                     object-fit: cover;
                     border-radius: 6px;
                 }
@@ -191,22 +214,37 @@ section {
     .mission-section {
         
         @include flexCenter(row, space-evenly , center);
+        gap: 20px;
         .earth {
             
-            width: 30vw;
+            /*width: 30vw;*/
             display: flex;
-            gap: 40px;           
+
+            width: 50%;
+            height: 320px;
+
+                       
             color: $text-color;
+            
+
             img {
                 object-fit: contain;
+                width: 40%;
+                min-width: 200px;
+                max-width: 260px;
+
+                
             }
             p {
+                width: 60%;
                 text-align: center;
                 font-size: $paragraph-size;
             }
         }
+        
         .innovation {
             @extend .earth;
+
         }
     }
 }
@@ -217,9 +255,18 @@ section {
     }
     .gallery-images {
         @include flexCenter(row, space-between, center);
+
+        display: flex;
+        gap: 10px;
         img {
+            /*
             width: 28vw;
-            height: 45vh;
+            height: 45vh;*/
+            width: 33%;
+            height: 342px;
+            min-width: 252px;
+            max-width: 400px;
+
             object-fit: cover;
             object-position: 5px 35%;
             border-radius: 16px;
@@ -240,6 +287,11 @@ section {
     .map {
         @include flexCenter(row, center, center);
         padding-bottom: 50px;
+        img {
+            width: 90%;
+            border: 1px solid gray;
+            border-radius: 15px;
+        }
     }
     h3,p {
         font-size: $paragraph-size;
@@ -250,7 +302,7 @@ section {
 footer {
     
     background-color: $quaternary-color;
-    width: 100%;
+    /*width: 100%;*/
     height: auto;
     padding: 40px;
     color: white;
