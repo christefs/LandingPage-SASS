@@ -40,6 +40,8 @@ nav {
     justify-content: space-between;*/
     @include flexCenter(row, space-between, center);
     color: $primary-text-color;
+    
+    
     padding: 15px;
     p{
         font-size: $paragraph-size;
@@ -70,6 +72,7 @@ article {
     @include flexCenter(row, space-between, center);
     /*display: flex;
     justify-content: space-between;*/
+    gap: 20px;
 
     .impact-section {
         /*display: flex;
@@ -141,6 +144,8 @@ section {
             /*
             column-gap: 200px;
             row-gap: 80px;*/
+
+
        
         }
         
@@ -156,7 +161,7 @@ section {
             height: 45vh;*/
             
             width: 75%;
-            min-width: 190px;
+            min-width: 220px;
             max-width: 240px;
             height: 380px;
             background-color: $secondary-color;
@@ -186,14 +191,17 @@ section {
                 img {
                     /*width: 12vw;
                     height: 30vh;*/
-                    width: 172px;
-                    height: 228px;
+                    /*width: 172px;*/
+                    width: 95%;
+                    max-width: 172px;
+                    height: 215px;
                     object-fit: cover;
                     border-radius: 6px;
                 }
             }
             
         }
+
         
     }
     .furniture {
@@ -254,28 +262,41 @@ section {
         padding-bottom: 60px;
     }
     .gallery-images {
-        @include flexCenter(row, space-between, center);
-
+        @include flexCenter(row, space-evenly, center);
+        
         display: flex;
-        gap: 10px;
-        img {
+        /*gap: 10px;*/
+
+        flex-wrap: wrap;
+        width: 100%;
+     
+    }
+    .box-img {
+        display: flex;
+        width: 33.3%;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+
+        .image {
             /*
             width: 28vw;
             height: 45vh;*/
-            width: 33%;
-            height: 342px;
+            width: 90%;
+            height: 400px;
             min-width: 252px;
             max-width: 400px;
-
+    
             object-fit: cover;
             object-position: 5px 35%;
-            border-radius: 16px;
-
+            border-radius: 16px; 
+    
             &:hover {
                 transform: scale(1.1);
             }
         }
     }
+   
 }
 
 .location {
@@ -311,5 +332,89 @@ footer {
         
         gap: 40px;
         padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    section {
+        .healthcare {
+            .box-product-card {
+                display: flex;
+                width: 50%;
+                height: 500px;
+                
+            }
+            .product-card {
+                
+                width: 75%;
+                
+                min-width: 220px;
+                max-width: 240px;
+                height: 380px;
+                
+                padding: 20px;
+                
+        
+            }
+        }
+    
+    }
+
+    .about-us {
+        
+        .mission-section {
+            
+            .earth {
+                
+                /*width: 30vw;*/
+                display: flex;    
+                /*width: 50%;
+                height: 320px;*/
+
+                img {
+                    
+                    object-fit: contain;
+                    width: 55%;
+                    min-width: 170px;
+                    max-width: 200px;
+    
+                    
+                }
+                p {
+                    
+                    width: 45%;
+                    
+                    font-size: 1.4em;
+                }
+    
+            }
+        }
+    }
+
+    .gallery {
+        
+        .gallery-images {
+            display: flex;
+            
+                 
+        }
+        .box-img {
+                
+            width: 50%;
+            
+
+            .image {
+                width: 75%;
+                
+                min-width: 252px;
+                max-width: 400px;
+
+                object-fit: cover;
+                object-position: 5px 35%;
+                border-radius: 16px; 
+            }
+        }
+       
+               
     }
 }
