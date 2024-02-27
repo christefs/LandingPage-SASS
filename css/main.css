@@ -38,10 +38,6 @@ nav .icons button {
   border-style: none;
 }
 
-/*
-main {
-    background-color: $primary-color;
-}*/
 article {
   /*width: auto;*/
   color: #7C6A0A;
@@ -341,5 +337,43 @@ footer .social-media {
     -o-object-position: 5px 35%;
        object-position: 5px 35%;
     border-radius: 16px;
+  }
+}
+@media screen and (max-width: 770px) {
+  article {
+    flex-direction: column;
+  }
+  section .healthcare, section .furniture {
+    /*
+    .product-card {
+
+        width: 75%;
+
+        min-width: 220px;
+        max-width: 240px;
+        height: 380px;
+
+        padding: 20px;
+
+
+    }*/
+  }
+  section .healthcare .box-product-card, section .furniture .box-product-card {
+    /*display: flex;*/
+    width: 100%;
+    /*height: 500px;*/
+  }
+  .about-us .mission-section {
+    flex-direction: column;
+  }
+  .gallery .box-img {
+    width: 100%;
+    /*
+    height: 500px;
+    justify-content: center;
+    align-items: center;*/
+  }
+  footer .legend-footer h3, footer .legend-footer p {
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */
