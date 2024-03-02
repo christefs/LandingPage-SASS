@@ -93,7 +93,6 @@ article {
         width: 172px;
         padding: 20px;;
         background-color: $quaternary-color;
-        /*border-style: none;*/
         border-radius: 35px;
         color: white;
         font-size: 1em;
@@ -115,11 +114,10 @@ article {
 section {
     /*width: auto;*/
     height: auto;
-    /*background-color: pink;*/
     padding: 60px;
 
     h2 {
-        /*color: $primary-color;*/
+        
         color: $primary-text-color;
         font-size: 2em;
     }
@@ -138,12 +136,6 @@ section {
             /*align-items: center;*/
             @include flexCenter(row, space-evenly, center);
             
-            /*
-            column-gap: 200px;
-            row-gap: 80px;*/
-
-
-       
         }
         
         .box-product-card {
@@ -159,7 +151,7 @@ section {
             
             width: 75%;
             min-width: 220px;
-            max-width: 240px;
+            max-width: 300px;
             height: 380px;
             background-color: $secondary-color;
             color: $primary-text-color;
@@ -218,18 +210,17 @@ section {
     }
     .mission-section {
         
-        @include flexCenter(row, space-evenly , center);
+        @include flexCenter(row, space-evenly, center);
         gap: 20px;
         .earth {
             
             /*width: 30vw;*/
             display: flex;
-
             width: 50%;
-            height: 320px;
-
-                       
+            height: 320px;                      
             color: $text-color;
+            justify-content: center;
+            align-items: center;
             
 
             img {
@@ -241,8 +232,10 @@ section {
                 
             }
             p {
+                
                 width: 60%;
                 text-align: center;
+                padding: 0 10px 0 10px;
                 font-size: $paragraph-size;
             }
         }
@@ -262,8 +255,6 @@ section {
         @include flexCenter(row, space-evenly, center);
         
         display: flex;
-        /*gap: 10px;*/
-
         flex-wrap: wrap;
         width: 100%;
      
@@ -282,7 +273,7 @@ section {
             width: 90%;
             height: 400px;
             min-width: 252px;
-            max-width: 400px;
+            max-width: 300px;
     
             object-fit: cover;
             object-position: 5px 35%;
@@ -344,12 +335,10 @@ footer {
             }
             .product-card {
                 
-                width: 75%;
-                
+                width: 75%;              
                 min-width: 220px;
-                max-width: 240px;
-                height: 380px;
-                
+                max-width: 300px;
+                height: 380px;              
                 padding: 20px;
                 
         
@@ -359,15 +348,12 @@ footer {
     }
 
     .about-us {
-        
+        padding: 40px;
         .mission-section {
             
             .earth {
                 
-                /*width: 30vw;*/
                 display: flex;    
-                /*width: 50%;
-                height: 320px;*/
 
                 img {
                     
@@ -380,9 +366,8 @@ footer {
                 }
                 p {
                     
-                    width: 45%;
-                    
-                    font-size: 1.4em;
+                    width: 45%;                 
+                    font-size: 1.2em;
                 }
     
             }
@@ -402,11 +387,9 @@ footer {
             
 
             .image {
-                width: 75%;
-                
-                min-width: 252px;
-                max-width: 400px;
-
+                width: 75%;             
+                min-width: 240px;
+                max-width: 340px;
                 object-fit: cover;
                 object-position: 5px 35%;
                 border-radius: 16px; 
@@ -415,42 +398,78 @@ footer {
        
                
     }
+
+    .location {
+     
+        h3,p {
+            font-size: 1.3em;
+        }
+        
+    }
 }
 
 @media screen and (max-width: 770px) {
     article {
         flex-direction: column;
+
+        h1 {
+            font-size: 2.5em;
+            padding: 0px;
+            margin: 0px;
+        }
+        p {
+            font-size: 1.3em;
+        }
+        img {
+            
+            min-width: 260px;
+            max-width: 340px;
+            
+        }
     }
 
     section {
+        padding-left: 30px;
+        padding-right: 30px;
         .healthcare {
             .box-product-card {
-                /*display: flex;*/
+                
                 width: 100%;
-                /*height: 500px;*/
                 
             }
-            /*
+            
             .product-card {
                 
-                width: 75%;
+                max-width: 300px;
                 
-                min-width: 220px;
-                max-width: 240px;
-                height: 380px;
-                
-                padding: 20px;
-                
-        
-            }*/
+            }
         }
     
     }
 
     .about-us {
-        
+        padding: 20px;
         .mission-section {
             flex-direction:column;
+
+            .earth {
+                width: 100%;
+
+                img {
+                    
+                    object-fit: contain;
+                    width: 40%;
+                    min-width: 140px;
+                    max-width: 170px;
+    
+                    
+                }
+                p {
+                    
+                    width: 60%;    
+                    font-size: 1em;
+                }
+            }
         }
     }
 
@@ -460,12 +479,26 @@ footer {
         .box-img {
             
             width: 100%;
-            /*
-            height: 500px;
-            justify-content: center;
-            align-items: center;*/
+            
         }
     }
+
+    .location {
+        
+        .map {
+            
+            
+            img {
+                width: 97%;
+                min-width: 290px;
+            }
+        }
+        h3,p {
+            font-size: 1.2em;
+        }
+        
+    }
+
     footer {
         .legend-footer {
             h3, p {
