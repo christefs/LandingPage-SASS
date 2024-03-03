@@ -1,1 +1,2 @@
 # LandingPage-SASS
+Esta es una Landing Page que hace uso del preprocesador SASS, la página contiene una Navbar, sección principal y footer. Se implementa Responsive Design para acomodación de elementos en dispositivos con tamaños de pantalla tipo tablet entre 770px y 1025px y tipo mobile con tamaños menores a 770px. Se puede acceder a este portal desde la URL: https://christefs.github.io/LandingPage-SASS/
